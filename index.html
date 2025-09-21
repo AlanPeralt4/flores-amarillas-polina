@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+    <style>
+        /* Ajustar tamaño de letras y animación */
+        .greetings span {
+            font-size: 1.5rem; /* Tamaño de letra */
+            margin-right: 0.2rem; /* Espacio entre letras */
+            opacity: 0;
+            display: inline-block;
+            animation: fadeIn 1s forwards;
+        }
+
+        /* Animación letra por letra */
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="greetings">
+        <!-- Dear -->
+        <span style="animation-delay: 0.2s;">D</span>
+        <span style="animation-delay: 0.4s;">e</span>
+        <span style="animation-delay: 0.6s;">a</span>
+        <span style="animation-delay: 0.8s;">r</span>
+        <span style="margin-right: 0.6rem;"></span> <!-- espacio extra entre palabras -->
+
+        <!-- Polina -->
+        <span style="animation-delay: 1s;">P</span>
+        <span style="animation-delay: 1.2s;">o</span>
+        <span style="animation-delay: 1.4s;">l</span>
+        <span style="animation-delay: 1.6s;">i</span>
+        <span style="animation-delay: 1.8s;">n</span>
+        <span style="animation-delay: 2s;">a</span>
+        <span style="animation-delay: 2.2s;">!</span>
+    </div>
+
+    <div class="description">
+        <span>This gift is for you ❤️</span>
+    </div>
+
+    <div class="button">
+        <button class="botones">
+            <a href="flower.html" style="color: #fff;">CLICK HERE</a>
+        </button>
+    </div>
+    
+
+    <script>
+        // Efecto de aparición letra por letra usando JS (opcional si quieres más control)
+        const letters = document.querySelectorAll('.greetings span');
+        letters.forEach((span, index) => {
+            span.style.animationDelay = `${index * 0.2}s`;
+        });
+    </script>
+</body>
+</html>
